@@ -1,0 +1,53 @@
+body {
+  font-family: roboto;
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid;
+}
+
+.main-container {
+  display: grid;
+  grid-template: 1fr 5fr/ 1fr 4fr;
+  height: 100%;
+  width: 100%;
+  border: 1px solid;
+}
+
+.dashboard-topbar {
+  grid-area: 1/2/2/6;
+  display: grid;
+  grid-template: 1fr 2fr/ 1fr;
+}
+
+.dashboard-topbar-top {
+  grid-area: 1/1/2/2;
+}
+
+.dashboard-topbar-bottom {
+  grid-area: 2/1/4/2;
+}
+
+.dashboard-sidebar {
+  grid-area: 2/1/7/2;
+  display: grid;
+  grid-template: 1fr/1fr;
+  grid-auto-rows: 1fr;
+}
+
+.dashboard-home-btn {
+  grid-area: 1/1/2/2;
+}
+
+.dashboard-info {
+  grid-area: 2/2/7/6;
+  display: grid;
+  grid-template: repeat()
+}
+
+.project-card-container {}
+
+.project-card {}
+
+.announcements-container {}
+
+.announcements-card {}
