@@ -4,6 +4,10 @@ body {
   width: 100vw;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main-container {
   display: grid;
   grid-template: 1fr 5fr/ 1fr 4fr;
@@ -15,12 +19,18 @@ body {
   grid-area: 1/2/2/3;
   display: grid;
   grid-template: 1fr 2fr/ 1fr;
+  box-shadow: 1px 1px 3px grey;
+  background: mintcream;
 }
 
 .dashboard-topbar-top {
   grid-area: 1/1/2/2;
   display: grid;
   grid-template: 1fr / 2fr 1fr;
+}
+
+.dashboard-topbar-top input {
+  width: 70%;
 }
 
 .dashboard-topbar-bottom {
@@ -30,23 +40,45 @@ body {
 }
 
 .dashboard-sidebar {
-  grid-area: 2/1/3/2;
+  grid-area: 1/1/3/2;
   display: grid;
-  grid-template: 1fr/1fr;
-  grid-auto-rows: 1fr;
-  background-color: skyblue;
+  grid-template: 50px / 1fr;
+  grid-auto-rows: 50px;
+  background-color: royalblue;
 }
 
-.dashboard-home-btn {
-  grid-area: 1/1/2/2;
+.dashboard-sidebar a {
+  color: white;
+}
+
+.dashboard-side-btn-main{
+  grid-area: 1/1/3/2;
+}
+
+.dashboard-side-btn-main a{
+  font-size: 2rem;
+}
+
+.dashboard-side-btn-seperator{
+  grid-area: 8/1/10/2;
+  align-self: end;
+}
+
+.dashboard-side-btn{
+  max-height: 50px;
+  min-height: 50px;
+}
+
+.icon-padding{
+  padding: 1rem;
 }
 
 .dashboard-info {
   grid-area: 2/2/3/3;
   display: grid;
-  grid-template: 2fr 1fr / 4fr 1fr;
+  grid-template: 2fr 1fr / 3fr 1fr;
   background: aliceblue;
-  padding: 2rem;
+  padding: 3rem 2rem 3rem 2rem;
   gap: 1rem;
   grid-row-gap: 2rem;
 }
@@ -63,34 +95,51 @@ body {
 .dashboard-info-title{
   position: absolute;
   top: -2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .project-card {
  border-radius: 5px;
- background: snow;
+ background: ghostwhite;
  border-left: 5px solid orange;
  box-shadow: 1px 1px 3px grey;
  display: grid;
- grid-template: 8fr 2fr / 1fr;
+ position: relative;
+ grid-template: 1fr 7fr 2fr / 1fr;
+ padding: 1rem;
 }
 
-.project-card-content {
-  grid-area: 1/1/2/2;
+.project-card-title{
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.project-card-buttons {
-  grid-area: 2/1/3/2;
+.project-card-info{
+
+}
+
+.project-card-action-container{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 .announcements-container {
   grid-area: 1/2/2/3;
   display: grid;
+  grid-template: 1fr / 1fr;
+  grid-auto-rows: 1fr;
   position: relative;
   border-radius: 5px;
-  border: 1px solid;
 }
 
-.announcements-card {}
+.announcements-card {
+  justify-self: center;
+  max-height: 150px;
+  min-height: 150px;
+  border: 1px solid;
+}
 
 .trending-container{
   grid-area: 2/2/3/3;
@@ -99,5 +148,6 @@ body {
 }
 
 .trending-card{
+  justify-self: center;
 
 }
