@@ -2,6 +2,7 @@ body {
   font-family: roboto;
   height: 100vh;
   width: 100vw;
+  margin: 0 auto;
 }
 
 a {
@@ -19,8 +20,9 @@ a {
   grid-area: 1/2/2/3;
   display: grid;
   grid-template: 1fr 2fr/ 1fr;
-  box-shadow: 1px 1px 3px grey;
-  background: mintcream;
+  box-shadow: 1px 1px 4px grey;
+  padding: 1rem;
+  margin-bottom: 2px;
 }
 
 .dashboard-topbar-top {
@@ -31,12 +33,83 @@ a {
 
 .dashboard-topbar-top input {
   width: 70%;
+  height: 30px;
+  background: gainsboro;
+  border-radius: 30px;
+  border: none;
+}
+
+.account-info{
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+.topbar-profile-img{
+  align-self: center;
+  justify-self: end;
+  padding-right: 1rem;
+}
+
+.account-name{
+  font-weight: bold;
+  justify-self: start;
+  align-self: center;
 }
 
 .dashboard-topbar-bottom {
   grid-area: 2/1/3/2;
   display: grid;
-  grid-template: 1fr / 2fr 1fr;
+  grid-template: 1fr / 2fr 3fr;
+}
+
+.greeting-user{
+  justify-self: start;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 2fr;
+}
+
+.profile-image{
+  grid-area: 1/1/3/2;
+  align-self: center;
+  justify-self: end;
+  padding-right: 1rem;
+}
+
+.greeting-message{
+  align-self: end;
+}
+
+.profile-name{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-image img{
+    border-radius: 100px;
+}
+
+.small-profile-img{
+  border-radius: 100px;
+}
+
+.topbar-action-buttons{
+  justify-self: center;
+  align-self: end;
+  display: grid;
+  grid-template: 1fr / repeat(3, 150px);
+}
+
+.topbar-action-buttons button{
+ justify-self: center;
+ align-self: center;
+ background: royalblue;
+ height: 40px;
+ width: 120px;
+ border-radius: 20px;
+ border: none;
+ font-size: 1rem;
+ font-weight: bold;
+ color: white;
 }
 
 .dashboard-sidebar {
@@ -45,6 +118,7 @@ a {
   grid-template: 50px / 1fr;
   grid-auto-rows: 50px;
   background-color: royalblue;
+  padding-left: 1.5rem;
 }
 
 .dashboard-sidebar a {
@@ -79,8 +153,8 @@ a {
   grid-template: 2fr 1fr / 3fr 1fr;
   background: aliceblue;
   padding: 3rem 2rem 3rem 2rem;
-  gap: 1rem;
-  grid-row-gap: 2rem;
+  gap: 2rem;
+  column-gap: 1rem;
 }
 
 .project-card-container {
@@ -101,7 +175,7 @@ a {
 
 .project-card {
  border-radius: 5px;
- background: ghostwhite;
+ background: white;
  border-left: 5px solid orange;
  box-shadow: 1px 1px 3px grey;
  display: grid;
@@ -116,7 +190,8 @@ a {
 }
 
 .project-card-info{
-
+  color: grey;
+  padding-top: 0.5rem;
 }
 
 .project-card-action-container{
@@ -131,23 +206,66 @@ a {
   grid-template: 1fr / 1fr;
   grid-auto-rows: 1fr;
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 1px 1px 3px grey;
 }
 
 .announcements-card {
   justify-self: center;
-  max-height: 150px;
-  min-height: 150px;
-  border: 1px solid;
+  display: grid;
+  grid-template: 1fr 4fr / 1fr;
+  padding: 1.5rem;
+}
+
+.announcements-card-title{
+  font-size: 0.9rem;
+  font-weight: bold;
+  align-self: center;
+}
+
+.announcements-card-content{
+  font-size: 0.7rem;
+  border-bottom: 1px solid grey;
+  color: grey;
 }
 
 .trending-container{
+  justify-items: start;
   grid-area: 2/2/3/3;
   display: grid;
+  grid-template: 1fr / 1fr;
+  grid-auto-rows: 1fr;
   position: relative;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 1px 1px 3px grey;
+  padding: 2rem;
 }
 
 .trending-card{
-  justify-self: center;
+  display: grid;
+  grid-template: 1fr / 1fr 3fr;
+}
 
+.trending-details{
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr;
+}
+
+.trending-profile-img{
+  align-self: center;
+  justify-self: end;
+  padding-right: 1rem;
+}
+
+.user-handle{
+  align-self: center;
+  justify-self: start;
+}
+
+.user-message{
+  align-self: start;
+  color: grey;
+  font-size: 0.8rem;
 }
